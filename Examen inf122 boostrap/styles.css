@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Fondo azul claro */
+    display: flex;
+    justify-content: center;
+    transition: background-color 1s ease-in-out; /* Añadir una transición al fondo del cuerpo */
+}
+
+h1 {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Añadir animación de aparición */
+}
+
+p {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out 1s; /* Añadir animación de aparición con retraso */
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out; /* Añadir transición suave al pasar el ratón */
+}
+
+.box img:hover {
+    transform: scale(1.1); /* Efecto zoom al pasar el ratón */
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    animation: slideUp 2s ease-in-out; /* Añadir animación de deslizamiento hacia arriba */
+}
+
+.box {
+    margin: 0;
+    border: 2px solid #000; 
+    position: relative; 
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añadir transiciones suaves */
+}
+
+nav.navbar {
+    background-color: #87CEEB; /* Fondo celeste */
+    transition: background-color 0.5s ease-in-out;
+}
+
+form.d-flex {
+    margin-left: auto; /* Alinear la barra de búsqueda a la derecha */
+}
+
+form.d-flex input {
+    transition: width 0.5s ease-in-out;
+}
+
+form.d-flex input:focus {
+    width: 200px; /* Aumentar el ancho del campo de búsqueda al enfocarse */
+}
+
+.blue {
+    height: 10vh;
+    animation: fadeIn 2s ease-in-out; /* Añadir animación de aparición */
+}
+
+.box-row {
+    display: flex;
+    justify-content: space-between;
+    height: 30vh; 
+}
+
+.green {
+    background-color: orange;
+    width: 33.5%;
+    margin-top: 10px; 
+    animation: boxAnimation 3s infinite alternate; /* Añadida animación */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Añadir transiciones */
+}
+
+.green:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Definición de la animación */
+@keyframes boxAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.split-box {
+    display: flex;
+    justify-content: space-between;
+    height: 40vh; 
+}
+
+.grey {
+    width: 80%; 
+    height: 100%;
+    background: url('/ruta/a/tu/imagen.jpg') no-repeat center center; /* Puedes cambiar la ruta de la imagen o el color */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    padding: 10px; 
+    animation: fadeIn 2s ease-in-out; /* Añadir animación de aparición */
+}
+
+.grey .table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 2px solid #000; /* Borde opcional */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para la tabla */
+    animation: slideUp 2s ease-in-out; /* Añadir animación de deslizamiento hacia arriba */
+}
+
+.split-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    animation: fadeIn 2s ease-in-out; /* Añadir animación de aparición */
+}
+
+.brown {
+    background-color: brown;
+    height: 100%; 
+    animation: fadeIn 2s ease-in-out; /* Añadir animación de aparición */
+}
+
+/* Definiciones de Animaciones Globales */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
